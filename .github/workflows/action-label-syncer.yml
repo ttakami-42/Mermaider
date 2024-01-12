@@ -1,11 +1,6 @@
 name: Sync labels
 
-on:
-  push:
-    branches:
-      - production
-  paths:
-    - .github/action-label-syncer-labels.yml
+on: pull_request
 jobs:
   build:
     name: Sync labels
