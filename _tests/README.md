@@ -19,7 +19,7 @@ Even though the prompt's _Few-Shot_ example requests **GPT-3.5** to respond with
 {"role": "assistant", "content": "<response message>"}
 ```
 
-By using _function calling_, Models must respond with a different parameters:
+By using _function calling_, models must respond with a different parameters:
 
 ```
 {'role': 'assistant',
