@@ -1,4 +1,4 @@
-# function calling vs three backticks
+# Function Calling vs Three Backticks
 
 This is a log of the prompt performance testing for the development of Mermaider.</br>In my opinion, it is difficult to keep the quality of the **GPT-3.5** model responses using just the _Few Shot_ technique and other prompt engineering (it worked well on **GPT-4**).</br>One discovery in testing is that _function calling_ is effective in removing backticks from **GPT-3.5** output.
 
@@ -45,7 +45,7 @@ In the performance test, backticks appeared just 3 times out of 500 runs (only a
 > [!NOTE]
 > _All the graphs were created with ChatGPT._
 
-## How to use the tester
+## How to Use the Tester
 
 ### Library Installation
 
@@ -72,9 +72,9 @@ python3 multiTester.py [file_name] [count]
 ```
 
 > [!WARNING]
-> Pay attention to the API usage fees.
+> Pay attention to the API usage.
 
-## How to use the input generator
+## How to Use the Input Generator
 
 The source files in `data/input/code/` directory are converted to json.
 You can make error input using generator.py. Since it is just a random combination of sentences, edit generator.py if necessary.
