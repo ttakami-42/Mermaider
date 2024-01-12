@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - production
-  path:
+  paths:
     - .github/action-label-syncer-labels.yml
 jobs:
   build:
