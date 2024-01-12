@@ -1,27 +1,5 @@
 name-template: 'v$RESOLVED_VERSION 🧜🏽‍♀️'
 tag-template: 'v$RESOLVED_VERSION'
-autolabeler:
-  - label: feature
-    branch:
-      - '/^feat(ure)?[/-].+/'
-  - label: bug
-    branch:
-      - '/^fix[/-].+/'
-  - label: chore
-    branch:
-      - '/^chore[/-].+/'
-  - label: refactor
-    branch:
-      - '/(refactor|refactoring)[/-].+/'
-  - label: documentation
-    branch:
-      - '/doc(umentation)[/-].+/'
-    files:
-      - '*.md'
-  - label: test
-    branch:
-      - '/^test(ing)?[/-].+/'
-
 categories:
   - title: '🚀 Features'
     label:
@@ -50,6 +28,25 @@ version-resolver:
       - 'patch'
   default: patch
 template: |
-  ## Changes
-
   $CHANGES
+autolabeler:
+  - label: feature
+    branch:
+      - '/^feat(ure)?[/-].+/'
+  - label: bug
+    branch:
+      - '/^fix[/-].+/'
+  - label: chore
+    branch:
+      - '/^chore[/-].+/'
+  - label: refactor
+    branch:
+      - '/(refactor|refactoring)[/-].+/'
+  - label: documentation
+    branch:
+      - '/doc(umentation)[/-].+/'
+    files:
+      - '*.md'
+  - label: test
+    branch:
+      - '/^test(ing)?[/-].+/'
