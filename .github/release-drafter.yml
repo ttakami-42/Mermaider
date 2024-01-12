@@ -1,17 +1,41 @@
 name-template: 'v$RESOLVED_VERSION 🧜🏽‍♀️'
 tag-template: 'v$RESOLVED_VERSION'
+autolabeler:
+  - label: feature
+    branch:
+      - '/^feat(ure)?[/-].+/'
+  - label: bug
+    branch:
+      - '/^fix[/-].+/'
+  - label: chore
+    branch:
+      - '/^chore[/-].+/'
+  - label: refactor
+    branch:
+      - '/(refactor|refactoring)[/-].+/'
+  - label: documentation
+    branch:
+      - '/doc(umentation)[/-].+/'
+    files:
+      - '*.md'
+  - label: test
+    branch:
+      - '/^test(ing)?[/-].+/'
+
 categories:
   - title: '🚀 Features'
-    labels:
+    label:
       - 'feature'
-      - 'enhancement'
   - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
+    label:
       - 'bug'
   - title: '🧰 Maintenance'
-    label: 'chore'
+    labels:
+      - 'test'
+      - 'chore'
+      - 'refactor'
+      - 'documentation'
+
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 version-resolver:

@@ -1,0 +1,18 @@
+- color: d73a4a
+  description: Something isn't working
+  name: bug
+- color: 0075ca
+  description: Improvements or additions to documentation
+  name: documentation
+- color: a2eeef
+  description: New feature or request
+  name: feature
+- color: f9d0c4
+  description: Refactor Code
+  name: refactor
+- color: cfd3d7
+  description: Something that needs to be done
+  name: chore
+- color: 0e8a16
+  description: Add or update tests
+  name: test
