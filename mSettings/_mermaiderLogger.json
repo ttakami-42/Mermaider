@@ -1,0 +1,39 @@
+{
+	"version": 1,
+	"disable_existing_loggers": false,
+	"formatters": {
+		"standard": {
+			"format": "[{asctime}] [{levelname:<5}] {name:<16}: {message}",
+			"datefmt": "%Y-%m-%d %H:%M:%S",
+			"style": "{"
+		}
+	},
+	"handlers": {
+		"fileHandler": {
+			"class": "logging.handlers.RotatingFileHandler",
+			"formatter": "standard",
+			"filename": "_mermaider.log",
+			"encoding": "utf-8",
+			"maxBytes": 33554432,
+			"backupCount": 5,
+			"level": "ERROR"
+		},
+		"streamHandler": {
+			"class": "logging.StreamHandler",
+			"formatter": "standard",
+			"level": "INFO"
+		}
+	},
+	"loggers": {
+		"mermaiderCommand": {
+			"handlers": ["fileHandler"],
+			"level": "INFO",
+			"propagate": false
+		},
+		"mermaiderSystem": {
+			"handlers": ["fileHandler", "streamHandler"],
+			"level": "INFO",
+			"propagate": false
+		}
+	}
+}

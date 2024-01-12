@@ -1,0 +1,21 @@
+{
+	"tools": [
+		{
+			"type": "function",
+			"function": {
+				"name": "getImageURL",
+				"description": "Get image URL from the given Mermaid code that you made from user's input.\nIf user does not provide the code, this function must not be called.",
+				"parameters": {
+					"type": "object",
+					"properties": {
+						"mermaid": {
+							"type": "string",
+							"description": "The Mermaid code which visualizes the flow of the code given by user."
+						}
+					},
+					"required": ["mermaid"]
+				}
+			}
+		}
+	]
+}
