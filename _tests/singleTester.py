@@ -5,10 +5,9 @@ import utils
 class SingleTestClass(utils.TestClass):
 	def __init__(self, fileName: str, filePath: str, count: int) -> None:
 		super().__init__()
-		with open(filePath, 'r') as f:
-			self.text = f.read()
+		text = utils.readFile(filePath)
 		self.setup_progress_bar(total=count, desc=f'Testing {fileName}', unit='tests')
-		self.setup_openai_vars(needInitialize=True, additionalContent=self.text)
+		self.setup_openai_vars(needInitialize=True, additionalContent=text)
 		self.setup_data_class(fileName=fileName)
 
 if __name__ == '__main__':
