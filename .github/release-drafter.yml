@@ -32,7 +32,6 @@ version-resolver:
       - 'documentation'
   default: patch
 template: |
-  ## Changes
   $CHANGES
 autolabeler:
   - label: feature
