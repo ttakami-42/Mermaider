@@ -22,12 +22,17 @@ version-resolver:
       - 'major'
   minor:
     labels:
-      - 'minor'
+      - 'feature'
   patch:
     labels:
-      - 'patch'
+      - 'bug'
+      - 'test'
+      - 'chore'
+      - 'refactor'
+      - 'documentation'
   default: patch
 template: |
+  ## Changes
   $CHANGES
 autolabeler:
   - label: feature
