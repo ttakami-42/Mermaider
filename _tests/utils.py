@@ -20,6 +20,11 @@ def getFilePath(fileName: str, dirName: str) -> str:
 	filePath = join(dirName, fileName)
 	return filePath if access(filePath, R_OK) else None
 
+def readFile(filePath: str) -> str:
+	with open(filePath, 'r') as f:
+		text = f.read()
+	return text
+
 def loadJSONFile(filePath: str) -> dict:
 	with open(filePath, 'r') as f:
 		jsonData = load(f)
