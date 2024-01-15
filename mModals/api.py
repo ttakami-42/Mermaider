@@ -1,12 +1,12 @@
 import openai
 from json import loads
 from .exc import ModalException
-from mSettings import getAPIKey, loadPrompt
+from mSettings import getAPIKey, loadMermaiderPrompt
 
 def callGPT(model: str, promptKeyValue: str, needTool: bool, text: str) -> dict:
 	try:
 		openai.api_key = getAPIKey()
-		myPrompt = loadPrompt()
+		myPrompt = loadMermaiderPrompt()
 		myPrompt[promptKeyValue].append({"role": "user", "content": text})
 		response = openai.chat.completions.create(
 			model = model,

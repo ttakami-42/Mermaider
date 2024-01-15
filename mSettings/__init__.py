@@ -1,1 +1,1 @@
-from .settings import getBotToken, getServerId, getAPIKey, loadPrompt, loadMermaiderLogger
+from .settings import getBotToken, getServerId, getAPIKey, loadMermaiderPrompt, loadMermaiderLogger
