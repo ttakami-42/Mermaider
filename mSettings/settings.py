@@ -55,7 +55,7 @@ def loadMermaiderPrompt() -> dict:
 def loadMermaiderLogger() -> None:
 	try:
 		loggerPath = join(dirname(__file__), '_mermaiderLogger.json')
-		with open(loggerPath, "r") as f:
+		with open(loggerPath, 'r') as f:
 			loggerSettings = load(f)
 			config.dictConfig(loggerSettings)
 	except Exception:
