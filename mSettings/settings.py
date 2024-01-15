@@ -43,18 +43,20 @@ def getAPIKey() -> str:
 	except Exception:
 		raise
 
-def loadPrompt() -> dict:
+def loadMermaiderPrompt() -> dict:
 	try:
 		promptPath = join(dirname(__file__), '_mermaiderPrompt.json')
-		with open(promptPath, 'r') as file:
-			data = load(file)
+		with open(promptPath, 'r') as f:
+			data = load(f)
 		return (data)
 	except Exception:
 		raise
 
 def loadMermaiderLogger() -> None:
 	try:
-		with open("mSettings/_mermaiderLogger.json", "r") as f:
-			config.dictConfig(load(f))
+		loggerPath = join(dirname(__file__), '_mermaiderLogger.json')
+		with open(loggerPath, "r") as f:
+			loggerSettings = load(f)
+			config.dictConfig(loggerSettings)
 	except Exception:
 		raise

@@ -16,3 +16,6 @@
 - color: 0e8a16
   description: Add or update tests
   name: test
+- color: ffe53b
+  description: Breaking changes
+  name: breaking
