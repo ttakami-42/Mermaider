@@ -1,6 +1,9 @@
 name-template: 'v$RESOLVED_VERSION 🧜🏽‍♀️'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
+  - title: 'Breaking Changes'
+    label:
+      - 'breaking'
   - title: '🚀 Features'
     label:
       - 'feature'
@@ -19,7 +22,7 @@ change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add
 version-resolver:
   major:
     labels:
-      - 'major'
+      - 'breaking'
   minor:
     labels:
       - 'feature'
