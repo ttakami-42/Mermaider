@@ -50,6 +50,8 @@ pip3 install openai furl python-dotenv requests
 python3 -m pip install -U discord.py
 ```
 
+Since this program coded end of 2023, openai-python v1.3.7 and discord.py v2.3.2 might be needed to execute.
+
 ### Environment Variables
 
 Create a `.env` file in the project's `mSettings` directory and configure it as follows:
